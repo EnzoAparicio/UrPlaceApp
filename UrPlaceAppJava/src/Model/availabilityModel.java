@@ -1,20 +1,18 @@
-import java.util.Date;
-import java.util.Time;
-import 
-
 package Model;
+
+import java.util.Date;
+import javax.xml.crypto.Data;
+
 
 public class availabilityModel {
     private int code;
     private boolean disponibility;
-    private date date;
-    private time time;
+    private Date date;
 
-    public availabilityModel(int code, boolean disponibility, date date, time time) {
+    public availabilityModel(int code, boolean disponibility, Date date) {
         this.code = code;
         this.disponibility = disponibility;
         this.date = date;
-        this.time = time;
     }
     
     public int getCode() {
@@ -29,17 +27,11 @@ public class availabilityModel {
     public void setDisponibility(boolean disponibility) {
         this.disponibility = disponibility;
     }
-    public date getDate() {
+    public Date getDate() {
         return date;
     }
-    public void setDate(date date) {
+    public void setDate(Date date) {
         this.date = date;
-    }
-    public time getTime() {
-        return time;
-    }
-    public void setTime(time time) {
-        this.time = time;
     }
 
 }

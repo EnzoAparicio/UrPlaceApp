@@ -1,5 +1,6 @@
-import java.lang.Object;
 package Model;
+import java.lang.Object;
+
 
 public class turisticPlaceModel{
 	private int codeLocation;
