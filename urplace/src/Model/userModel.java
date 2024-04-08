@@ -1,67 +1,76 @@
 package Model;
-
-public class userModel {
+import java.io.Serializable;
+import jakarta.persistence.*;
+@Entity
+@Table(name="User")
+public class userModel implements Serializable {
+	private static final long serialVersionID = 1L;
+	
+	@Column (name="code")
+	@Id
     private int code;
-    private char name;
-    private char lastName;
-    private char email;
-    private char password;
-    private char cellphone;
+	
+    private String name;
+    private String lastName;
+    private String email;
+    private String password;
+    private String cellphone;
 
-    public userModel(int code, char name, char lastName, char email, char password, char cellphone) {
-        this.code = code;
-        this.name = name;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.cellphone = cellphone;
-    }
+    public userModel() {}
 
-    public int getCode() {
-        return code;
-    }
+	public int getCode() {
+		return code;
+	}
 
-    public void setCode(int code) {
-        this.code = code;
-    }
+	public void setCode(int code) {
+		this.code = code;
+	}
 
-    public char getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(char name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public char getLastName() {
-        return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setLastName(char lastName) {
-        this.lastName = lastName;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public char getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(char email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public char getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(char password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public char getCellphone() {
-        return cellphone;
-    }
+	public String getCellphone() {
+		return cellphone;
+	}
 
-    public void setCellphone(char cellphone) {
-        this.cellphone = cellphone;
-    }
+	public void setCellphone(String cellphone) {
+		this.cellphone = cellphone;
+	}
+
+	@Override
+	public String toString() {
+		return "userModel [code=" + code + ", name=" + name + ", lastName=" + lastName + ", email=" + email
+				+ ", password=" + password + ", cellphone=" + cellphone + "]";
+	}
+    
+	
 }
