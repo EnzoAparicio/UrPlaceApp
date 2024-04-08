@@ -1,5 +1,5 @@
 package Model;
-import java.lang.Object;
+
 
 
 public class turisticPlaceModel{
