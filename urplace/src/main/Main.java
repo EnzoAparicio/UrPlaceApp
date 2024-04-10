@@ -1,8 +1,6 @@
 package main;
 
 import java.util.List;
-
-
 import Model.userModel;
 import jakarta.persistence.*;
 
