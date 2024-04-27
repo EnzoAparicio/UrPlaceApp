@@ -22,8 +22,14 @@ public class Controller {
 	@Autowired
 	private UserRepository repository;
 	
-	@GetMapping("/person/{id}")
-	public void getUserById(@PathVariable("code") Integer code) {
-		repository.getReferenceById(code);
+	@GetMapping("/users")
+	public List<User> allUsers(){
+		return repository.findAll();
 	}
+	
+	@GetMapping("/person/{code}")
+	public User getUserById(@PathVariable("code") Integer code) {
+		return repository.getReferenceById(code);
+	}
+	
 }

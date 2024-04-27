@@ -13,25 +13,21 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "User")
+@EntityListeners(AuditingEntityListener.class)
 public class User {
-	
-	@Column (name = "code")
-	@Id
-	private Integer code;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer code;
 	private String name;
 
-	private String lastName;
+	private String last_name;
 
 	private String email;
 
 	private String cellphone;
 	
 	private String password;
-
-	public User() {
-	}
 
 	public Integer getCode() {
 		return code;
@@ -50,11 +46,11 @@ public class User {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return last_name;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastName(String last_name) {
+		this.last_name = last_name;
 	}
 
 	public String getEmail() {
@@ -83,7 +79,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "UserModel [code=" + code + ", name=" + name + ", lastName=" + lastName + ", email=" + email
+		return "UserModel [code=" + code + ", name=" + name + ", lastName=" + last_name + ", email=" + email
 				+ ", cellphone=" + cellphone + ", password=" + password + "]";
 	}
 
