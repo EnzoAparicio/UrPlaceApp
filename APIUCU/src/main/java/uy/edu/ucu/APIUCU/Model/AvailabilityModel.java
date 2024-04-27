@@ -1,14 +1,14 @@
-package Model;
+package uy.edu.ucu.APIUCU.Model;
 
 import java.util.Date;
 
 
-public class availabilityModel {
+public class AvailabilityModel {
     private int code;
     private boolean disponibility;
     private Date date;
 
-    public availabilityModel(int code, boolean disponibility, Date date) {
+    public AvailabilityModel(int code, boolean disponibility, Date date) {
         this.code = code;
         this.disponibility = disponibility;
         this.date = date;

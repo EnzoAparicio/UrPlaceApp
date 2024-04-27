@@ -1,4 +1,4 @@
-package Model;
+package uy.edu.ucu.APIUCU.Model;
 
 public class typeModel {
     private int code;

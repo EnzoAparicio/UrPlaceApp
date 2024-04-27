@@ -2,9 +2,8 @@ package main;
 
 import java.util.List;
 
-
-import Model.userModel;
 import jakarta.persistence.*;
+import uy.edu.ucu.APIUCU.Model.userModel;
 
 public class Main {
 

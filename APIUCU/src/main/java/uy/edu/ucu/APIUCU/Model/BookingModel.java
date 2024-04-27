@@ -1,11 +1,11 @@
-package Model;
+package uy.edu.ucu.APIUCU.Model;
 
-public class bookingModel {
+public class BookingModel {
     private int code;
     private int amountOfPeople;
     private double price;
 
-    public bookingModel(int code, int amountOfPeople, double price) {
+    public BookingModel(int code, int amountOfPeople, double price) {
         this.code = code;
         this.amountOfPeople = amountOfPeople;
         this.price = price;

@@ -6,7 +6,7 @@
 
   <persistence-unit name="jpa-example"> 
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-	<class>com.urplace.src.Model.userModel</class>
+	<class>com.urplace.userModel</class>
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
       <property name="jakarta.persistence.jdbc.url"    value="jdbc:sqlserver://;serverName=urplaceserver.database.windows.net;databaseName=UrPlaceDB;encrypt=true" />

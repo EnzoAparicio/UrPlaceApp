@@ -1,13 +1,15 @@
-package Model;
+package uy.edu.ucu.APIUCU.Model;
 
-public class cityModel {
+public class stateModel {
     private int code;
     private char name;
+    private int codeCity;
     private char zone;
 
-    public cityModel(int code, char name, char zone) {
+    public stateModel(int code, char name, int codeCity, char zone) {
         this.code = code;
         this.name = name;
+        this.codeCity = codeCity;
         this.zone = zone;
     }
 
@@ -25,6 +27,14 @@ public class cityModel {
 
     public void setName(char name) {
         this.name = name;
+    }
+
+    public int getCodeCity() {
+        return codeCity;
+    }
+
+    public void setCodeCity(int codeCity) {
+        this.codeCity = codeCity;
     }
 
     public char getZone() {
