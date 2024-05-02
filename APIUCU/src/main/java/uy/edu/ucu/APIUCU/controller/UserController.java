@@ -17,7 +17,7 @@ import uy.edu.ucu.APIUCU.repository.UserRepository;
 
 @RestController
 @RequestMapping("/api")
-public class Controller {
+public class UserController {
 	
 	@Autowired
 	private UserRepository repository;
@@ -27,9 +27,25 @@ public class Controller {
 		return repository.findAll();
 	}
 	
-	@GetMapping("/person/{code}")
+	@GetMapping("/user/{code}")
 	public User getUserById(@PathVariable("code") Integer code) {
-		return repository.getReferenceById(code);
+		return repository.findById(code).get();
+	}
+	
+	@PostMapping("/user")
+	public User createUser(@RequestBody User user) {
+		return repository.save(user);
+	}
+	
+	@DeleteMapping("/user/{code}")
+	public String deleteUser(@PathVariable("code") Integer code) {
+		repository.deleteById(code);
+		return "El usuario " + code + " ha sido borrado exitosamente";
+	}
+	
+	@PutMapping("/user")
+	public User updateUser(@RequestBody User user) {
+		return repository.save(user);
 	}
 	
 }

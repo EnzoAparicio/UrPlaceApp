@@ -21,7 +21,7 @@ public class User {
 	private Integer code;
 	private String name;
 
-	private String last_name;
+	private String lastname;
 
 	private String email;
 
@@ -46,11 +46,11 @@ public class User {
 	}
 
 	public String getLastName() {
-		return last_name;
+		return lastname;
 	}
 
-	public void setLastName(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getEmail() {
@@ -79,7 +79,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "UserModel [code=" + code + ", name=" + name + ", lastName=" + last_name + ", email=" + email
+		return "UserModel [code=" + code + ", name=" + name + ", lastname=" + lastname + ", email=" + email
 				+ ", cellphone=" + cellphone + ", password=" + password + "]";
 	}
 
