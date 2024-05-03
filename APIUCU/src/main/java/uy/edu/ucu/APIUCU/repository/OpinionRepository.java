@@ -3,11 +3,11 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import uy.edu.ucu.APIUCU.Model.Booking;
+import uy.edu.ucu.APIUCU.Model.Opinion;
 
 @Repository
-public interface BookingRepository extends JpaRepository<Booking, Integer> {	
+public interface OpinionRepository extends JpaRepository<Opinion, Integer> {	
 
-	Optional<Booking> findById(Integer code);
+	Optional<Opinion> findById(Integer code);
 		
 }

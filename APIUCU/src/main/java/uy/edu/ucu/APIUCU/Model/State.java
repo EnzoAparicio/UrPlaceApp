@@ -1,12 +1,12 @@
 package uy.edu.ucu.APIUCU.Model;
 
-public class stateModel {
+public class State {
     private int code;
     private char name;
     private int codeCity;
     private char zone;
 
-    public stateModel(int code, char name, int codeCity, char zone) {
+    public State(int code, char name, int codeCity, char zone) {
         this.code = code;
         this.name = name;
         this.codeCity = codeCity;

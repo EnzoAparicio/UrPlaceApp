@@ -2,7 +2,7 @@ package uy.edu.ucu.APIUCU.Model;
 
 
 
-public class turisticPlaceModel{
+public class TuristicPlace{
 	private int codeLocation;
     private int code;
     private int codeAvailability;
@@ -11,7 +11,7 @@ public class turisticPlaceModel{
     private int codeOpinion;
     private int codeType;
     
-    public turisticPlaceModel(int codeLocation, int code, int codeAvailability, char description, char name, int codeOpinion, int codeType) {
+    public TuristicPlace(int codeLocation, int code, int codeAvailability, char description, char name, int codeOpinion, int codeType) {
         this.codeLocation = codeLocation;
         this.code = code;
         this.codeAvailability = codeAvailability;

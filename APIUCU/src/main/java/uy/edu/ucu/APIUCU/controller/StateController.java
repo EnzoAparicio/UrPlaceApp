@@ -12,39 +12,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import uy.edu.ucu.APIUCU.Model.Opinion;
-import uy.edu.ucu.APIUCU.repository.OpinionRepository;
+import uy.edu.ucu.APIUCU.Model.State;
+import uy.edu.ucu.APIUCU.repository.StateRepository;
 
 @RestController
 @RequestMapping("/api")
-public class OpinionController {
+public class StateController {
 	@Autowired
-	private OpinionRepository repository;
+	private StateRepository repository;
 	
-	@GetMapping("/opinions")
-	public List<Opinion> allOpinions(){
+	@GetMapping("/state")
+	public List<State> allStates(){
 		return repository.findAll();
 	}
 	
-	@GetMapping("/opinion/{code}")
-	public Opinion getOpinionById(@PathVariable("code") Integer code) {
+	@GetMapping("/state/{code}")
+	public State getStateById(@PathVariable("code") Integer code) {
 		return repository.findById(code).get();
 	}
 	
-	@PostMapping("/opinion")
-	public Opinion createOpinion(@RequestBody Opinion opinion) {
-		return repository.save(opinion);
+	@PostMapping("/State")
+	public State createState(@RequestBody State state) {
+		return repository.save(state);
 	}
 	
-	@DeleteMapping("/opinion/{code}")
-	public String deleteOpinion(@PathVariable("code") Integer code) {
+	@DeleteMapping("/state/{code}")
+	public String deleteState(@PathVariable("code") Integer code) {
 		repository.deleteById(code);
-		return "Su opinión " + code + " ha sido borrada exitosamente";
+		return "El departamento " + code + " ha sido borrado exitosamente";
 	}
 	
-	@PutMapping("/opinion")
-	public Opinion updateOpinion(@RequestBody Opinion opinion) {
-		return repository.save(opinion);
+	@PutMapping("/state")
+	public State updateState(@RequestBody State state) {
+		return repository.save(state);
 	}
 
 }
