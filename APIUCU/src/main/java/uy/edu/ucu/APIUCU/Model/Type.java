@@ -10,14 +10,12 @@ import jakarta.persistence.Id;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class State {
-    
+public class Type {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int code;
-    private char name;
-    private int codeCity;
-    private char zone;
+    private int code;
+    private String name;
 
     public int getCode() {
         return code;
@@ -27,28 +25,12 @@ public class State {
         this.code = code;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getCodeCity() {
-        return codeCity;
-    }
-
-    public void setCodeCity(int codeCity) {
-        this.codeCity = codeCity;
-    }
-
-    public char getZone() {
-        return zone;
-    }
-
-    public void setZone(char zone) {
-        this.zone = zone;
     }
 
 }

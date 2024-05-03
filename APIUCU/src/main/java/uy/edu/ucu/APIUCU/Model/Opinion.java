@@ -1,19 +1,24 @@
 package uy.edu.ucu.APIUCU.Model;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class Opinion {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int code;
     private int codeUser;
-    private char comment;
+    private String comment;
     private int star;
     private int like;
-
-    public Opinion(int code, int codeUser, char comment, int star, int like) {
-        this.code = code;
-        this.codeUser = codeUser;
-        this.comment = comment;
-        this.star = star;
-        this.like = like;
-    }
 
     public int getCode() {
         return code;
@@ -31,11 +36,11 @@ public class Opinion {
         this.codeUser = codeUser;
     }
 
-    public char getComment() {
+    public String getComment() {
         return comment;
     }
 
-    public void setComment(char comment) {
+    public void setComment(String comment) {
         this.comment = comment;
     }
 
