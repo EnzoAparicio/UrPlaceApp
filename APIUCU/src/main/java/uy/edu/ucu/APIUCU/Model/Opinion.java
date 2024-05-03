@@ -1,13 +1,13 @@
 package uy.edu.ucu.APIUCU.Model;
 
-public class opinionModel {
+public class Opinion {
     private int code;
     private int codeUser;
     private char comment;
     private int star;
     private int like;
 
-    public opinionModel(int code, int codeUser, char comment, int star, int like) {
+    public Opinion(int code, int codeUser, char comment, int star, int like) {
         this.code = code;
         this.codeUser = codeUser;
         this.comment = comment;

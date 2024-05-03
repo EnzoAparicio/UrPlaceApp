@@ -30,21 +30,5 @@ public class CityController {
 	public City getAvailabilityById(@PathVariable("code") Integer code) {
 		return repository.findById(code).get();
 	}
-	
-	@PostMapping("/city")
-	public City createAvailability(@RequestBody City city) {
-		return repository.save(city);
-	}
-	
-	@DeleteMapping("/city/{code}")
-	public String deleteAvailability(@PathVariable("code") Integer code) {
-		repository.deleteById(code);
-		return "La ciudad " + code + " ha sido borrada exitosamente";
-	}
-	
-	@PutMapping("/city")
-	public City updateAvailability(@RequestBody City city) {
-		return repository.save(city);
-	}
 
 }
