@@ -10,6 +10,6 @@ import uy.edu.ucu.APIUCU.Model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {	
 	
-	Optional<User> findById(Integer code);
+	Optional<User> findById(Integer codeUser);
 	
 }

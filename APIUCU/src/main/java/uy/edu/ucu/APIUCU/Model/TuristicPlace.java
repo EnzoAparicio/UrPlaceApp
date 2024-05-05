@@ -1,81 +1,73 @@
 package uy.edu.ucu.APIUCU.Model;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class TuristicPlace{
-	private int codeLocation;
-    private int code;
-    private int codeAvailability;
-    private char description;
-    private char name;
-    private int codeOpinion;
-    private int codeType;
-    
-    public TuristicPlace(int codeLocation, int code, int codeAvailability, char description, char name, int codeOpinion, int codeType) {
-        this.codeLocation = codeLocation;
-        this.code = code;
-        this.codeAvailability = codeAvailability;
-        this.description = description;
-        this.name = name;
-        this.codeOpinion = codeOpinion;
-        this.codeType = codeType;
-    }
-
-    public int getCodeLocation() {
-        return codeLocation;
-    }
-
-    public void setCodeLocation(int codeLocation) {
-        this.codeLocation = codeLocation;
-    }
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int code_turistic_place;
+    private String description;
+    private String name;
+    private int code_availability;
+    private int code_type;
+    private int code_city;
 
     public int getCode() {
-        return code;
+        return code_turistic_place;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_turistic_place = code;
     }
 
-    public int getCodeAvailability() {
-        return codeAvailability;
-    }
-
-    public void setCodeAvailability(int codeAvailability) {
-        this.codeAvailability = codeAvailability;
-    }
-
-    public char getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(char description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
     }
-
-    public int getCodeOpinion() {
-        return codeOpinion;
+    
+    public int getCodeAvailability() {
+        return code_availability;
     }
 
-    public void setCodeOpinion(int codeOpinion) {
-        this.codeOpinion = codeOpinion;
+    public void setCodeAvailability(int codeAvailability) {
+        this.code_availability = codeAvailability;
     }
 
     public int getCodeType() {
-        return codeType;
+        return code_type;
     }
 
     public void setCodeType(int codeType) {
-        this.codeType = codeType;
+        this.code_type = codeType;
     }
 
+	public int getCodeCity() {
+		return code_city;
+	}
+
+	public void setCodeCity(int codeCity) {
+		this.code_city = codeCity;
+	}
     
 }

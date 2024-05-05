@@ -14,29 +14,38 @@ public class Opinion {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
-    private int codeUser;
+    private int code_opinion;
+    private int code_user;
+    private int code_turistic_place;
     private String comment;
     private int star;
-    private int like;
+    private int opinionLike;
 
     public int getCode() {
-        return code;
+        return code_opinion;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_opinion = code;
     }
 
     public int getCodeUser() {
-        return codeUser;
+        return code_user;
     }
 
     public void setCodeUser(int codeUser) {
-        this.codeUser = codeUser;
+        this.code_user = codeUser;
     }
 
-    public String getComment() {
+    public int getCode_turistic_place() {
+		return code_turistic_place;
+	}
+
+	public void setCode_turistic_place(int code_turistic_place) {
+		this.code_turistic_place = code_turistic_place;
+	}
+
+	public String getComment() {
         return comment;
     }
 
@@ -52,12 +61,12 @@ public class Opinion {
         this.star = star;
     }
 
-    public int getLike() {
-        return like;
+    public int getOpinionLike() {
+        return opinionLike;
     }
 
-    public void setLike(int like) {
-        this.like = like;
+    public void setOpinionLike(int opinionLike) {
+        this.opinionLike = opinionLike;
     }
 
 }

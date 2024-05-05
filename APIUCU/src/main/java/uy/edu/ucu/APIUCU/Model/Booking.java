@@ -19,19 +19,21 @@ public class Booking {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
+    private int code_booking;
 	
     private int amountOfPeople;
+    
+    private int code_user;
     
     private double price;
 
 
     public int getCode() {
-        return code;
+        return code_booking;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_booking = code;
     }
 
     public int getAmountOfPeople() {
@@ -42,7 +44,15 @@ public class Booking {
         this.amountOfPeople = amountOfPeople;
     }
 
-    public double getPrice() {
+    public int getCodeUser() {
+		return code_user;
+	}
+
+	public void setCodeUser(int codeUser) {
+		this.code_user = codeUser;
+	}
+
+	public double getPrice() {
         return price;
     }
 
@@ -52,7 +62,7 @@ public class Booking {
 
 	@Override
 	public String toString() {
-		return "Booking [code=" + code + ", amountOfPeople=" + amountOfPeople + ", price=" + price + "]";
+		return "Booking [code=" + code_booking + ", amountOfPeople=" + amountOfPeople + ", price=" + price + "]";
 	}
 
 }

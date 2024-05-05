@@ -14,15 +14,15 @@ public class Type {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
+    private int code_type;
     private String name;
 
     public int getCode() {
-        return code;
+        return code_type;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_type = code;
     }
 
     public String getName() {

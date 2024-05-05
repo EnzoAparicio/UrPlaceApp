@@ -18,7 +18,8 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer code;
+	private Integer code_user;
+	
 	private String name;
 
 	private String lastname;
@@ -29,12 +30,12 @@ public class User {
 	
 	private String password;
 
-	public Integer getCode() {
-		return code;
+	public Integer getCodeUser() {
+		return code_user;
 	}
 
-	public void setCode(Integer code) {
-		this.code = code;
+	public void setCodeUser(Integer codeUser) {
+		this.code_user = codeUser;
 	}
 
 	public String getName() {
@@ -79,7 +80,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "UserModel [code=" + code + ", name=" + name + ", lastname=" + lastname + ", email=" + email
+		return "UserModel [code=" + code_user + ", name=" + name + ", lastname=" + lastname + ", email=" + email
 				+ ", cellphone=" + cellphone + ", password=" + password + "]";
 	}
 

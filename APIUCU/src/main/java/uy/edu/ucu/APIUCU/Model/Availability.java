@@ -18,18 +18,18 @@ public class Availability {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
+    private int code_availability;
 	
     private boolean disponibility;
     
     private Date date;
     
     public int getCode() {
-		return code;
+		return code_availability;
 	}
 
 	public void setCode(int code) {
-		this.code = code;
+		this.code_availability = code;
 	}
 
 	public boolean isDisponibility() {
@@ -50,7 +50,7 @@ public class Availability {
 
 	@Override
 	public String toString() {
-		return "Availability [code=" + code + ", disponibility=" + disponibility + ", date=" + date + "]";
+		return "Availability [code=" + code_availability + ", disponibility=" + disponibility + ", date=" + date + "]";
 	}
 
 }

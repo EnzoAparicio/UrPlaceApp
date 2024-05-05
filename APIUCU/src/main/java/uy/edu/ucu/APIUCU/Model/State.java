@@ -14,40 +14,31 @@ public class State {
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int code;
-    private char name;
-    private int codeCity;
-    private char zone;
+	private int code_state;
+    private String name;
+    private String zone;
 
     public int getCode() {
-        return code;
+        return code_state;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_state = code;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getCodeCity() {
-        return codeCity;
-    }
-
-    public void setCodeCity(int codeCity) {
-        this.codeCity = codeCity;
-    }
-
-    public char getZone() {
+    public String getZone() {
         return zone;
     }
 
-    public void setZone(char zone) {
+    public void setZone(String zone) {
         this.zone = zone;
     }
 

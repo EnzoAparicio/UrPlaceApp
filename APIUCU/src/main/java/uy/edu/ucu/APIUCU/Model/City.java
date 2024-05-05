@@ -15,16 +15,17 @@ public class City {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int code;
+    private int code_city;
     private String name;
+    private int code_state;
     private String zone;
 
     public int getCode() {
-        return code;
+        return code_city;
     }
 
     public void setCode(int code) {
-        this.code = code;
+        this.code_city = code;
     }
 
     public String getName() {
@@ -35,7 +36,15 @@ public class City {
         this.name = name;
     }
 
-    public String getZone() {
+    public int getCodeState() {
+		return code_state;
+	}
+
+	public void setCodeState(int codeState) {
+		this.code_state = codeState;
+	}
+
+	public String getZone() {
         return zone;
     }
 
@@ -45,7 +54,7 @@ public class City {
 
 	@Override
 	public String toString() {
-		return "City [code=" + code + ", name=" + name + ", zone=" + zone + "]";
+		return "City [code=" + code_city + ", name=" + name + ", zone=" + zone + "]";
 	}
 
 }
