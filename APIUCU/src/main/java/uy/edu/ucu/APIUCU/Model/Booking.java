@@ -20,6 +20,8 @@ public class Booking {
     private int code_user;
     
     private double price;
+    
+    private int code_turistic_place;
 
 
     public int getCode() {
@@ -54,9 +56,12 @@ public class Booking {
         this.price = price;
     }
 
-	@Override
-	public String toString() {
-		return "Booking [code=" + code_booking + ", amountOfPeople=" + amount_of_people + ", price=" + price + "]";
+	public int getCode_turistic_place() {
+		return code_turistic_place;
+	}
+
+	public void setCode_turistic_place(int code_turistic_place) {
+		this.code_turistic_place = code_turistic_place;
 	}
 
 }
