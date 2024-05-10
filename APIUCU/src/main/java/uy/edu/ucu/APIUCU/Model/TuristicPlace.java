@@ -18,7 +18,6 @@ public class TuristicPlace{
     private int code_turistic_place;
     private String description;
     private String name;
-    private int code_availability;
     private int code_type;
     private int code_city;
 
@@ -44,14 +43,6 @@ public class TuristicPlace{
 
     public void setName(String name) {
         this.name = name;
-    }
-    
-    public int getCodeAvailability() {
-        return code_availability;
-    }
-
-    public void setCodeAvailability(int codeAvailability) {
-        this.code_availability = codeAvailability;
     }
 
     public int getCodeType() {

@@ -16,7 +16,6 @@ public class State {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int code_state;
     private String name;
-    private String zone;
 
     public int getCode() {
         return code_state;
@@ -32,14 +31,6 @@ public class State {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
     }
 
 }

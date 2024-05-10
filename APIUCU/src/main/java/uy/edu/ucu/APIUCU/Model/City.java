@@ -18,7 +18,6 @@ public class City {
     private int code_city;
     private String name;
     private int code_state;
-    private String zone;
 
     public int getCode() {
         return code_city;
@@ -44,17 +43,9 @@ public class City {
 		this.code_state = codeState;
 	}
 
-	public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
-    }
-
 	@Override
 	public String toString() {
-		return "City [code=" + code_city + ", name=" + name + ", zone=" + zone + "]";
+		return "City [code=" + code_city + ", name=" + name;
 	}
 
 }

@@ -19,7 +19,6 @@ public class Opinion {
     private int code_turistic_place;
     private String comment;
     private int star;
-    private int opinionLike;
 
     public int getCode() {
         return code_opinion;
@@ -59,14 +58,6 @@ public class Opinion {
 
     public void setStar(int star) {
         this.star = star;
-    }
-
-    public int getOpinionLike() {
-        return opinionLike;
-    }
-
-    public void setOpinionLike(int opinionLike) {
-        this.opinionLike = opinionLike;
     }
 
 }
